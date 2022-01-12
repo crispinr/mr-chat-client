@@ -8,7 +8,6 @@ const backend_address = "https://mr-chat-server.herokuapp.com/";
 const socket = io.connect(backend_address);
 
 function App() {
-  // const frontend_address = "http://localhost:3000";
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
