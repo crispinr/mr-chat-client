@@ -68,7 +68,7 @@ function Chat({ socket, username, room }) {
           }}
         />
         <button onClick={sendMessage} class="btn" type="button">
-          <i class="fas fa-paper-plane"></i>
+          <i class="fas fa-paper-plane icons"></i>
         </button>
       </div>
     </div>
