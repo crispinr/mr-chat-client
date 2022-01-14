@@ -191,6 +191,7 @@
 .icons {
   background: -webkit-linear-gradient(#913fa5, #5348a7);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
