@@ -67,7 +67,9 @@ function Chat({ socket, username, room }) {
             event.key === "Enter" && sendMessage();
           }}
         />
-        <button onClick={sendMessage}>&#9658;</button>
+        <button onClick={sendMessage} class="btn" type="button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
       </div>
     </div>
   );
