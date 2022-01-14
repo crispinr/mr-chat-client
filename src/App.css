@@ -67,7 +67,7 @@
 }
 
 .chat-window {
-  background-color: #36393f;
+  background-color: #111111;
   width: 320px;
   height: 450px;
   border-radius: 10px;
@@ -110,7 +110,6 @@
   height: auto;
   min-width: 50px;
   max-width: 125px;
-  background-color: #232c39;
   border-radius: 5px;
   color: #fff;
   display: flex;
@@ -123,6 +122,14 @@
 #sender {
   display: flex;
   justify-content: flex-end;
+}
+
+#sender .message-content {
+  background-color: #5746d3;
+}
+
+#receiver .message-content {
+  background-color: #9b0dbd;
 }
 
 #receiver .message-meta,
