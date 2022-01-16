@@ -1,6 +1,11 @@
 {
   "name": "mr-chat",
   "version": "0.1.0",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
