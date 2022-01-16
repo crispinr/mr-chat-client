@@ -72,7 +72,7 @@
 
 .chat-window {
   background-color: #111111;
-  width: 320px;
+  width: 340px;
   height: 450px;
   border-radius: 10px;
 }
@@ -101,18 +101,12 @@
 .chat-window .chat-body .message-container {
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-.chat-window .chat-body .message-container::-webkit-scrollbar {
-  display: none;
 }
 
 .chat-window .chat-body .message .message-content {
   width: auto;
   height: auto;
-  min-width: 50px;
+  min-width: 80px;
   max-width: 125px;
   border-radius: 5px;
   color: #fff;
@@ -139,6 +133,8 @@
 #receiver .message-meta,
 #sender .message-meta {
   justify-content: flex-start;
+  align-items: flex-end;
+  margin-top: 2%;
   margin-left: 5%;
   margin-bottom: 10%;
   color: #fff;
@@ -148,6 +144,10 @@
 #receiver {
   display: flex;
   justify-content: flex-start;
+}
+
+.message-meta #time {
+  font-size: 10px;
 }
 
 .message-meta #author {
