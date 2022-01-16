@@ -18,6 +18,10 @@
   background-color: #9ca195;
 }
 
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
 .App {
   height: 100vh;
   width: 100%;
@@ -46,7 +50,7 @@
 .joinChatContainer input {
   width: 40%;
   margin-bottom: 5%;
-  border: 2px solid rgb(54, 177, 160);
+  border: 2px solid #111111;
   border-radius: 5px;
   padding: 1.5%;
   outline: none;
@@ -57,7 +61,7 @@
   border: none;
   border-radius: 5px;
   padding: 1.5%;
-  background: rgb(54, 177, 160);
+  background: #111111;
   color: #fff;
   cursor: pointer;
 }
