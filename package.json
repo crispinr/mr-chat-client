@@ -7,8 +7,8 @@
       "@babel/preset-react"
     ]
   },
-  "main": "dist/ChatHome.js",
-  "module": "dist/ChatHome.js",
+  "main": "dist/Chat.js",
+  "module": "dist/Chat.js",
   "files": [
     "dist",
     "README.md"
