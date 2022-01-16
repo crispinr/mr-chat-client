@@ -6,6 +6,12 @@
       "@babel/preset-react"
     ]
   },
+  "main": "dist/Chat.js",
+  "module": "dist/Chat.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
