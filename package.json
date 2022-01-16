@@ -1,5 +1,5 @@
 {
-  "name": "mr-chat",
+  "name": "mr-chat-client",
   "version": "0.1.0",
   "description": "A chat app which makes messaging fun!",
   "babel": {
