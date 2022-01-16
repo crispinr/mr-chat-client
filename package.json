@@ -1,6 +1,7 @@
 {
   "name": "mr-chat",
   "version": "0.1.0",
+  "description": "A chat app which makes messaging fun!",
   "babel": {
     "presets": [
       "@babel/preset-react"
@@ -12,17 +13,27 @@
     "dist",
     "README.md"
   ],
-  "private": true,
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispinr/mr-chat-client.git"
+  },
+  "keywords": [
+    "react",
+    "chat"
+  ],
+  "author": "Regis, Crispin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crispinr/mr-chat-client/issues"
+  },
+  "homepage": "https://github.com/crispinr/mr-chat-client#readme",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "react-scroll-to-bottom": "^4.2.0",
-    "socket.io-client": "^4.4.1",
-    "web-vitals": "^2.1.3"
+    "socket.io-client": "^4.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
