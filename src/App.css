@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -45,6 +47,8 @@
   width: 320px;
   height: 450px;
   border-radius: 10px;
+  font-family: Comfortaa;
+  font-size: small;
 }
 
 .joinChatContainer input {
@@ -75,6 +79,8 @@
   width: 340px;
   height: 450px;
   border-radius: 10px;
+  font-family: Comfortaa;
+  font-size: small;
 }
 
 .chat-window p {
@@ -107,7 +113,7 @@
   width: auto;
   height: auto;
   min-width: 80px;
-  max-width: 125px;
+  max-width: 135px;
   border-radius: 5px;
   color: #fff;
   display: flex;
