@@ -1,14 +1,14 @@
 {
   "name": "mr-chat-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A chat app which makes messaging fun!",
   "babel": {
     "presets": [
       "@babel/preset-react"
     ]
   },
-  "main": "dist/Chat.js",
-  "module": "dist/Chat.js",
+  "main": "dist/ChatHome.js",
+  "module": "dist/ChatHome.js",
   "files": [
     "dist",
     "README.md"
