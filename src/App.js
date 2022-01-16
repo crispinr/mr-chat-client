@@ -1,7 +1,7 @@
-import "./App.css";
+import "./components/Chat.css";
 import io from "socket.io-client";
 import { useState } from "react";
-import Chat from "./Chat";
+import Chat from "./components/Chat";
 
 const backend_address = "https://mr-chat-server.herokuapp.com/";
 
