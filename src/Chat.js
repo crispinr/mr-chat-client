@@ -46,11 +46,11 @@ function Chat({ socket, username, room }) {
               >
                 <div>
                   <div className="message-content">
-                    <p className="text-center">{messageContent.message}</p>
-                  </div>
-                  <div className="message-meta">
-                    <p id="time">{messageContent.time}</p>
-                    <p id="author">{messageContent.author}</p>
+                    <p className="">{messageContent.message}</p>
+                    <div className="message-meta">
+                      <p id="time">{messageContent.time}</p>
+                      <p id="author">{messageContent.author}</p>
+                    </div>
                   </div>
                 </div>
               </div>
