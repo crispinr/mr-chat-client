@@ -58,6 +58,8 @@
   border-radius: 5px;
   padding: 1.5%;
   outline: none;
+  font-family: Comfortaa;
+  font-size: small;
 }
 
 .joinChatContainer button {
