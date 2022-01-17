@@ -2,7 +2,6 @@ import "./Chat.css";
 import io from "socket.io-client";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import send from "./sendIcon.svg";
 const backend_address = "https://mr-chat-server.herokuapp.com/";
 const socket = io.connect(backend_address);
 export default function Chat() {
@@ -41,7 +40,7 @@ export default function Chat() {
   return /*#__PURE__*/React.createElement(React.Fragment, null, !showChat ? /*#__PURE__*/React.createElement("div", {
     className: "joinChatContainer"
   }, /*#__PURE__*/React.createElement("h3", {
-    className: "header"
+    className: "joinChatHeader"
   }, "Join a Chat Room"), /*#__PURE__*/React.createElement("input", {
     type: "text",
     placeholder: "Name",
@@ -98,9 +97,12 @@ export default function Chat() {
     }
   }), /*#__PURE__*/React.createElement("button", {
     onClick: sendMessage,
-    class: "btn",
+    class: "chatBtn",
     type: "button"
   }, /*#__PURE__*/React.createElement("img", {
-    src: send
+    className: "send-img",
+    alt: "send",
+    src: "https://mr-hoster.herokuapp.com/images/sendIcon.svg",
+    width: "15px"
   })))));
 }
