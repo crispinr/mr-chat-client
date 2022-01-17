@@ -2,7 +2,6 @@ import "./Chat.css";
 import io from "socket.io-client";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import send from "./sendIcon.svg";
 
 const backend_address = "https://mr-chat-server.herokuapp.com/";
 
@@ -49,7 +48,7 @@ export default function Chat() {
     <>
       {!showChat ? (
         <div className="joinChatContainer">
-          <h3 className="header">Join a Chat Room</h3>
+          <h3 className="joinChatHeader">Join a Chat Room</h3>
           <input
             type="text"
             placeholder="Name"
@@ -113,8 +112,13 @@ export default function Chat() {
                 event.key === "Enter" && sendMessage();
               }}
             />
-            <button onClick={sendMessage} class="btn" type="button">
-              <img src={send} />
+            <button onClick={sendMessage} class="chatBtn" type="button">
+              <img
+                className="send-img"
+                alt="send"
+                src="https://mr-hoster.herokuapp.com/images/sendIcon.svg"
+                width="15px"
+              />
             </button>
           </div>
         </div>

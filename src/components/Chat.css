@@ -24,15 +24,7 @@
   display: none;
 }
 
-.App {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header {
+.joinChatHeader {
   color: #fff;
 }
 
@@ -44,8 +36,8 @@
   text-align: center;
   border: 2px solid black;
   background-color: #36393f;
-  width: 320px;
-  height: 450px;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   font-family: Comfortaa;
   font-size: small;
@@ -188,24 +180,7 @@
   color: #fff;
 }
 
-/* .chat-window .chat-footer button {
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  border-radius: 50%;
-  border: none;
-}
-
-.chat-window .chat-footer button:hover {
-  box-shadow: 0 0 40px 40px red inset;
-} */
-
-.icons {
-  background: -webkit-linear-gradient(#913fa5, #5348a7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.btn {
+.chatBtn {
   position: relative;
   display: block;
   padding: 3%;
@@ -220,12 +195,12 @@
   filter: invert(100%); */
 }
 
-.btn:hover,
-.btn:focus {
+.chatBtn:hover,
+.chatBtn:focus {
   background-color: #252525;
 }
 
-.btn:before {
+.chatBtn:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -242,7 +217,7 @@
   transform: translate(-50%, -50%);
 }
 
-.btn:active:before {
+.chatBtn:active:before {
   width: 120%;
   padding-top: 120%;
   transition: width 0.2s ease-out, padding-top 0.2s ease-out;
