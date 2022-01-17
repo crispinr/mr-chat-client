@@ -2,6 +2,7 @@ import "./Chat.css";
 import io from "socket.io-client";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
+import send from "./sendIcon.svg";
 
 const backend_address = "https://mr-chat-server.herokuapp.com/";
 
@@ -113,7 +114,7 @@ export default function Chat() {
               }}
             />
             <button onClick={sendMessage} class="btn" type="button">
-              <i class="fas fa-paper-plane icons"></i>
+              <img src={send} />
             </button>
           </div>
         </div>
