@@ -1,7 +1,7 @@
 {
   "name": "mr-chat-client",
-  "version": "1.0.1",
-  "description": "A chat app which makes messaging fun!",
+  "version": "1.0.2",
+  "description": "A simple live chat widget based on socket.io, express.js and react.js!",
   "babel": {
     "presets": [
       "@babel/preset-react"
