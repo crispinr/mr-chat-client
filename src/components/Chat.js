@@ -7,9 +7,8 @@ const backend_address = "https://mr-chat-server.herokuapp.com/";
 
 const socket = io.connect(backend_address);
 
-export default function Chat() {
+export default function Chat({ roomKey }) {
   const [username, setUsername] = useState("");
-  const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
@@ -24,7 +23,7 @@ export default function Chat() {
   const sendMessage = async () => {
     if (currentMessage !== "") {
       const messageData = {
-        room: room,
+        room: roomKey,
         author: username,
         message: currentMessage,
         time:
@@ -54,13 +53,6 @@ export default function Chat() {
             placeholder="Name"
             onChange={(event) => {
               setUsername(event.target.value);
-            }}
-          />
-          <input
-            type="text"
-            placeholder="Room Key"
-            onChange={(event) => {
-              setRoom(event.target.value);
             }}
             onKeyPress={(event) => {
               event.key === "Enter" && joinRoom();
