@@ -2,12 +2,11 @@ import "./Chat.css";
 import io from "socket.io-client";
 import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-
 const backend_address = "https://mr-chat-server.herokuapp.com/";
-
 const socket = io.connect(backend_address);
-
-export default function Chat({ roomKey }) {
+export default function Chat({
+  roomKey
+}) {
   const [username, setUsername] = useState("");
   const [showChat, setShowChat] = useState(false);
   const [currentMessage, setCurrentMessage] = useState("");
@@ -26,95 +25,79 @@ export default function Chat({ roomKey }) {
         room: roomKey,
         author: username,
         message: currentMessage,
-        time:
-          new Date(Date.now()).getHours() +
-          ":" +
-          new Date(Date.now()).getMinutes(),
+        time: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes()
       };
       await socket.emit("send_message", messageData);
-      setMessageList((list) => [...list, messageData]);
+      setMessageList(list => [...list, messageData]);
       setCurrentMessage("");
     }
   };
 
   useEffect(() => {
-    socket.on("receive_message", (data) => {
-      setMessageList((list) => [...list, data]);
+    socket.on("receive_message", data => {
+      setMessageList(list => [...list, data]);
     });
   }, [socket]);
-
-  return (
-    <>
-      {!showChat ? (
-        <div className="joinChatContainer">
-          <h3 className="joinChatHeader">Join a Chat Room</h3>
-          <input
-            type="text"
-            placeholder="Name"
-            onChange={(event) => {
-              setUsername(event.target.value);
-            }}
-            onKeyPress={(event) => {
-              event.key === "Enter" && joinRoom();
-            }}
-          />
-          <button onClick={joinRoom}>Join</button>
-        </div>
-      ) : (
-        <div className="chat-window">
-          <div className="chat-header">
-            <p>
-              <span>Mr. Chat &nbsp;</span>
-              <i class="far fa-comments"></i>
-            </p>
-          </div>
-          <div className="chat-body">
-            <ScrollToBottom className="message-container">
-              {messageList.map((messageContent) => {
-                return (
-                  <div
-                    className="message"
-                    id={
-                      username === messageContent.author ? "sender" : "receiver"
-                    }
-                  >
-                    <div>
-                      <div className="message-content">
-                        <p className="">{messageContent.message}</p>
-                        <div className="message-meta">
-                          <p id="time">{messageContent.time}</p>
-                          <p id="author">{messageContent.author}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </ScrollToBottom>
-          </div>
-          <div className="chat-footer">
-            <input
-              type="text"
-              value={currentMessage}
-              placeholder="Type a message"
-              onChange={(event) => {
-                setCurrentMessage(event.target.value);
-              }}
-              onKeyPress={(event) => {
-                event.key === "Enter" && sendMessage();
-              }}
-            />
-            <button onClick={sendMessage} class="chatBtn" type="button">
-              <img
-                className="send-img"
-                alt="send"
-                src="https://mr-hoster.herokuapp.com/images/sendIcon.svg"
-                width="15px"
-              />
-            </button>
-          </div>
-        </div>
-      )}
-    </>
-  );
+  return /*#__PURE__*/React.createElement(React.Fragment, null, !showChat ? /*#__PURE__*/React.createElement("div", {
+    className: "joinChatContainer"
+  }, /*#__PURE__*/React.createElement("h3", {
+    className: "joinChatHeader"
+  }, "Join a Chat Room"), /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    placeholder: "Name",
+    onChange: event => {
+      setUsername(event.target.value);
+    },
+    onKeyPress: event => {
+      event.key === "Enter" && joinRoom();
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: joinRoom
+  }, "Join")) : /*#__PURE__*/React.createElement("div", {
+    className: "chat-window"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "chat-header"
+  }, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("span", null, "Mr. Chat \xA0"), /*#__PURE__*/React.createElement("i", {
+    class: "far fa-comments"
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "chat-body"
+  }, /*#__PURE__*/React.createElement(ScrollToBottom, {
+    className: "message-container"
+  }, messageList.map(messageContent => {
+    return /*#__PURE__*/React.createElement("div", {
+      className: "message",
+      id: username === messageContent.author ? "sender" : "receiver"
+    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+      className: "message-content"
+    }, /*#__PURE__*/React.createElement("p", {
+      className: ""
+    }, messageContent.message), /*#__PURE__*/React.createElement("div", {
+      className: "message-meta"
+    }, /*#__PURE__*/React.createElement("p", {
+      id: "time"
+    }, messageContent.time), /*#__PURE__*/React.createElement("p", {
+      id: "author"
+    }, messageContent.author)))));
+  }))), /*#__PURE__*/React.createElement("div", {
+    className: "chat-footer"
+  }, /*#__PURE__*/React.createElement("input", {
+    type: "text",
+    value: currentMessage,
+    placeholder: "Type a message",
+    onChange: event => {
+      setCurrentMessage(event.target.value);
+    },
+    onKeyPress: event => {
+      event.key === "Enter" && sendMessage();
+    }
+  }), /*#__PURE__*/React.createElement("button", {
+    onClick: sendMessage,
+    class: "chatBtn",
+    type: "button"
+  }, /*#__PURE__*/React.createElement("img", {
+    className: "send-img",
+    alt: "send",
+    src: "https://mr-hoster.herokuapp.com/images/sendIcon.svg",
+    width: "15px"
+  })))));
 }
