@@ -51,15 +51,7 @@ export default function Chat(props) {
             !showChat ? (
                 <div className="joinChatContainer">
                   <h3 className="joinChatHeader">Join a Chat Room</h3>
-                  <input
-                      type="text"
-                      placeholder="Name"
-                      onChange={(event) => {
-                        setUsername(props.userName);
-                        setRoom(props.roomKey);
-                      }}
-                  />
-                  <button onClick={joinRoom}
+                  <button onClick={joinRoom && ((setUsername(props.userName))&& (setRoom(props.roomKey)))}
                           onKeyPress={(event) =>
                           {event.key === "Enter" && joinRoom();}}
 
