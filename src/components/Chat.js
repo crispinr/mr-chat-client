@@ -55,14 +55,16 @@ export default function Chat(props) {
               type="text"
               placeholder="Name"
               onChange={(event) => {
-                setUsername(event.target.value);
+                setUsername(props.username);
                 setRoom(props.roomKey);
               }}
-              onKeyPress={(event) => {
-                event.key === "Enter" && joinRoom();
-              }}
             />
-            <button onClick={joinRoom}>Join</button>
+            <button onClick={joinRoom}
+                    onKeyPress={(event) =>
+                    {event.key === "Enter" && joinRoom();}}
+
+            >Join
+            </button>
           </div>
         ) : (
           <div className="chat-window">
