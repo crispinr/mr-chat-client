@@ -55,7 +55,7 @@ export default function Chat(props) {
                       type="text"
                       placeholder="Name"
                       onChange={(event) => {
-                        setUsername(props.username);
+                        setUsername(props.userName);
                         setRoom(props.roomKey);
                       }}
                   />
